@@ -29,11 +29,10 @@ const ProductForm = () => {
       const data = await response.json();
 
       if (response.ok) {
-        console.log("Product added successfully:", data);
         alert("Product added successfully!");
         setFormData({ name: "", description: "", price: "", imageUrl: "" });
       } else {
-        alert("Error adding product: " + data.message);
+        alert("Product could not be added: " + data.message);
       }
     } catch (error) {
       alert("Failed to connect to the server.");
@@ -44,7 +43,7 @@ const ProductForm = () => {
   return (
     <div
       style={{ marginTop: "50px", padding: "40px" }}
-      className="max-w-md mx-auto bg-white p-6 rounded-lg border"
+      className="max-w-[600px] mx-auto bg-white p-6 rounded-lg border "
     >
       <h2 className="text-xl font-semibold mb-4 mt-20 text-center">
         Add a New Product
@@ -88,7 +87,7 @@ const ProductForm = () => {
         />
         <button
           type="submit"
-          className="w-full padding bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
+          className="w-full padding bg-black p-8  text-white rounded hover:opacity-70 cursor-pointer"
         >
           Add Product
         </button>
