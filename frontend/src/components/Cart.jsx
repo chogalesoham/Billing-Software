@@ -1,4 +1,5 @@
-const Cart = ({ cartItem }) => {
+/* eslint-disable react/prop-types */
+const Cart = ({ cartItem,setshowInvoice }) => {
   const calculateTotal = (cartItems) => {
     return cartItems.reduce((total, item) => {
       // Convert price from string to number by removing commas
@@ -28,10 +29,13 @@ const Cart = ({ cartItem }) => {
       }
       {
         cartItem?.length > 0 && (
-          <div className="mt-4 text-xl flex gap-2">
-            <h2>Total Bill:</h2>
-            <h1>{calculateTotal(cartItem)}</h1>
-          </div>
+         <div>
+            <div className="mt-4 text-xl flex gap-2">
+              <h2>Total Bill:</h2>
+              <h1>{calculateTotal(cartItem)}</h1>
+            </div>
+            <div className="w-full text-center bg-white text-black font-bold p-2 rounded-sm mt-2 cursor-pointer hover:bg-white/60" onClick={()=>setshowInvoice(true)}>GENERATE BILL</div>
+         </div>
         )
       }
 
