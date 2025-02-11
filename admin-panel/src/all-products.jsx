@@ -15,8 +15,8 @@ const ProductTable = () => {
       <h2 className="text-3xl font-bold mb-4 text-center padding">
         Product List
       </h2>
-      <div style={{ marginTop: "25px" }} className="overflow-x-auto">
-        <table className="w-full border-collapse border border-gray-300">
+      <div style={{ marginTop: "25px" }} className="overflow-x-auto grid place-items-center">
+        <table className="w-full border-collapse border max-w-[1000px] border-gray-300">
           <thead>
             <tr className="bg-gray-200">
               <th className="border border-gray-300 p-2 padding">No</th>

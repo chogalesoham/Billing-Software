@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className=" flex items-center justify-between w-full container bg-amber-50 padding shadow-lg">
+    <div className=" flex items-center justify-between w-full container  bg-white padding shadow-lg">
       <Link to="/">
-        <h1 className=" text-4xl font-bold m-y">Billing Software </h1>
+        <h1 className=" text-2xl  m-y">Billing Software </h1>
       </Link>
 
       <Link
